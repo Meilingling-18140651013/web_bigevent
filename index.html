@@ -30,8 +30,14 @@
 
         </dl>
       </li>
-      <li class="layui-nav-item"><a href=""><span class="iconfont icon-tuichu"></span>退出</a></li>
+      <li class="layui-nav-item">
+        <a href="" id="btnLogout">
+          <span class="iconfont icon-tuichu"></span>
+          退出
+        </a>
+      </li>
     </ul>
+
   </div>
   
   <div class="layui-side layui-bg-black">
@@ -62,9 +68,10 @@
         <li class="layui-nav-item">
           <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+            
+            <dd><a href="/user/user_info.html" target="fm"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
             <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+            <dd><a href="/user/user_pwd.html" target="fm"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
           </dl>
         </li>
        
@@ -84,7 +91,11 @@
     © layui.com - 黑马程序员
   </div>
 </div>
+
 <script src="/assets/lib/layui/layui.all.js"></script>
+<script src="/assets/lib/jquery.js"></script>
+<script src="/assets/js/baseAPI.js"></script>
+<script src="/assets/js/index.js"></script>
 </body>
 </html>
 

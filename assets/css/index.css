@@ -25,27 +25,28 @@ a {
     width: 40px;
     height: 40px;
 }
-/* .userinfo {
+ .userinfo {
     height: 50px;
-    line-height: 50;
+    line-height: 50px;
     text-align: center;
     font-size: 12px;
     user-select: none;
-}
+} 
 
-.layui-side-scroll .userinfo {
-    border-bottom: 1px solid #black;
-} */
+ .layui-side-scroll .userinfo {
+    border-bottom: 1px solid black
+}  
 
-/* .text-avatar {
+ .text-avatar {
+    position: relative;
     display: inline-block;
     width: 40px;
     height: 40px;
     background-color: pink;
     border-radius: 50%;
-    line-height: 40;
+    line-height: 40px;
     text-align: center;
     font-size: 20px;
     color: #fff;
 
-} */
+}  
