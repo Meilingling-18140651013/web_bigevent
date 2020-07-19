@@ -3,6 +3,8 @@
 //数据的相关变化:先get用户的基本资料,用户填写相关资料后,进行资料提交,并且html页面中的相关样式要进行修改,如果选择重置,则初始化基本资料,
 $(function () {
     var form = layui.form
+    var layer = layui.layer
+
     form.verify({
         nickname: function (value) {
             if (value.length > 6) {
@@ -22,14 +24,14 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg('获取用户信息失败！')
                 }
-                console.log(res)
+               // console.log(res)
+               // 调用 form.val() 快速为表单赋值
+               form.val('formUserInfo', res.data)
+
             }
         })
     }
-    //获取用户的基本信息
-
-    form.val('formUserInfo', res.data)
-
+    
     // 重置表单的数据
     $('#btnReset').on('click', function (e) {
         // 阻止表单的默认重置行为

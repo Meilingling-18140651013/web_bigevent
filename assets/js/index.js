@@ -7,7 +7,7 @@
 $(function () {
   //获取用户信息实在页面一加载的时候就获取
   getUserInfo()
-  renderAvatar()
+  //renderAvatar()
   //判断用户是否有 nickname .如果有作为欢迎词,没有就用username
 
   //判断是否也有user_pic属性,有,让img标签显示,并且设置src属性值为user_pic
