@@ -31,8 +31,12 @@ form.verify({
       }
 })
 
+//注册用户的ajax请求
+//监听注册表单的提交事件
 $('#form_reg').on('submit',function(e){
+    //1.阻止默认的提交行为
     e.preventDefault()
+    //发起ajax的post请求
     var data = {
         username: $('#form_reg [name=username]').val(),
         password: $('#form_reg [name=password]').val(),
@@ -47,6 +51,7 @@ $('#form_reg').on('submit',function(e){
     })
 })
 
+//发起登陆的ajax请求
 $('#form_login').submit(function(e){
     e.preventDefault()
     $.ajax({
@@ -58,7 +63,9 @@ $('#form_login').submit(function(e){
                 return layer.msg('登录失败')
             }
             layer.msg('登录成功')
+            //将登录成功得到的token字符串,保存到localStorage中
             localStorage.setItem('token'.res.token)
+            //跳转到后台主页
             location.href = '/index.html'
         }
        
